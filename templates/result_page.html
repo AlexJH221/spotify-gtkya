@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Song Match Your Friends</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Result page" />
+    <meta name="author" content="" />
+    <link href="../static/styles/style.css" rel="stylesheet" />
+  </head>
+
+  <body class="show_result">
+    <h1 id="show_similar_taste" class="show_result">
+      Friends with similar taste:
+    </h1>
+    <ol class="list_user">
+      {% for i in range(5) %}
+      <li>{{data[0][i][0]}}</li>
+      {% endfor %}
+    </ol>
+    <br />
+    <h1 id="show_similar_distaste" class="show_result">
+      Friends with similar distastes:
+    </h1>
+    <ol class="list_user">
+      {% for i in range(5) %}
+      <li>{{data[1][i][0]}}</li>
+      {% endfor %}
+    </ol>
+  </body>
+</html>
